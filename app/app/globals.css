@@ -1,0 +1,81 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --primary-blue: 59, 130, 246;
+  --secondary-blue: 96, 165, 250;
+  --accent-blue: 147, 197, 253;
+  --gray-dark: 55, 65, 81;
+  --gray-medium: 107, 114, 128;
+  --gray-light: 229, 231, 235;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, rgb(var(--primary-blue)) 0%, rgb(var(--secondary-blue)) 100%);
+}
+
+.tech-pattern {
+  background-image: 
+    radial-gradient(circle at 2px 2px, rgb(var(--accent-blue)) 1px, transparent 0);
+  background-size: 20px 20px;
+  opacity: 0.1;
+}
+
+.section-bg-light {
+  background: linear-gradient(to bottom, #f8fafc, #e2e8f0);
+}
+
+.section-bg-dark {
+  background: linear-gradient(to bottom, #1e293b, #334155);
+}
+
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.animate-number {
+  animation: countUp 2s ease-out forwards;
+}
+
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.parallax {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}

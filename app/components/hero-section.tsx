@@ -48,7 +48,7 @@ export function HeroSection() {
           >
             <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white shadow-2xl">
               <Image
-                src="https://gsm.ucdavis.edu/sites/default/files/styles/directory/public/2024-02/Dean%20Unnava%20-%20Headshot%202024.jpg?h=fdb3f044&itok=t95vpza-"
+                src="/perfil.jpg"
                 alt="Sergio Gómez Lajos - Professional Portrait"
                 fill
                 className="object-cover"
